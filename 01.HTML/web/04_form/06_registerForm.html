@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06 registerFrom</title>
+<style type="text/css">
+table, td, th {
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<!-- table>(tr>th*4)+(tr>td*4)*12 -->
+	<!-- form[action=""]>input[type="text" size="10" name="userName"] -->
+	<form name="memberForm" action="">
+		<table>
+			<tr>
+				<th colspan="4">가입폼</th>
+			</tr>
+			<tr>
+				<td>이름*</td>
+				<td colspan="3">
+					<input type="text" size="10" name="userName" />
+				</td>
+			</tr>
+			<tr>
+				<td>아이디*</td>
+				<td colspan="3">
+					<input type="text" size="10" name="userId" />
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호*</td>
+				<td colspan="3">
+					<input type="password" size="10" name="userPass" />
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인*</td>
+				<td colspan="3">
+					<input type="password" size="10" name="passConfirm" />
+				</td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td colspan="3">
+					<!-- input[type="radio" name="gender" value=""] -->
+					<input type="radio" name="gender" value="M" /> 남 
+					<input type="radio" name="gender" value="F" /> 여
+				</td>
+			</tr>
+			<tr>
+				<td>연령대</td>
+				<td colspan="3">
+					<!-- select[name="age"]>(option[value""]*3) --> 
+					<select
+						name="age" id="">
+							<option value="">== 연령대를 선택 ==</option>
+							<option value="10 ~ 80">10대 ~ 80대</option>
+							<option value="80 over">80대 이상</option>
+					</select>
+				</td>
+				<!-- 		<td></td> -->
+				<!-- 		<td></td> -->
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td colspan="3">
+					<!-- form>(input[type="checkbox" name="hobby" value=""]*5) --> 
+					<input type="checkbox" name="hobby" value="sports" /> 스포츠 
+					<input type="checkbox" name="hobby" value="surfing" /> 서핑 
+					<input type="checkbox" name="hobby" value="camping" /> 캠핑 
+					<input type="checkbox" name="hobby" value="music" /> 노래 
+					<input type="checkbox" name="hobby" value="travel" /> 여행
+				</td>
+			</tr>
+			<tr>
+				<td>이메일*</td>
+				<td colspan="3">
+					<input type="text" size="10" name="emailId" />
+					@ 
+					<!-- select[name="email"]>(option[value=""]*5) -->
+					<select name="email" id="">
+						<option value="">== 메일 주소 선택 ==</option>
+						<option value="naver.com">네이버</option>
+						<option value="daum.net">다음</option>
+						<option value="gamil.com">구글</option>
+						<option value="yahoo.co,kr">야후</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td colspan="3">
+					<!-- select[name="address"]>(option[value=""]*5) -->
+					<!-- input[type="text" size="10" name="middleNum"] -->
+					<select name="address" id="">
+						<option value="02">02</option>
+						<option value="031">031</option>
+						<option value="041">041</option>
+						<option value="042">042</option>
+						<option value="064">064</option>
+					</select>
+						-
+						<input type="text" size="10" name="middleNum" />
+						-
+						<input type="text" size="10" name="lastNum" />
+				</td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td>소개말</td>
+				<td colspan="3">
+					<!-- textarea[rows="10" cols="30"] --> 
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<input type="submit" /> 
+					<input type="reset" />
+				</td>
+
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
