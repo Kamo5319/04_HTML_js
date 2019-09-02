@@ -3,10 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>06 registerFrom</title>
+<link rel="stylesheet type="text/css"
+ 	  href="./css/registerStyle.css">
 <style type="text/css">
-table, td, th {
-	border: 1px solid black;
+
+textarea {
+	resize: none;
 }
+
 </style>
 </head>
 <body>
@@ -18,40 +22,40 @@ table, td, th {
 				<th colspan="4">가입폼</th>
 			</tr>
 			<tr>
-				<td>이름*</td>
-				<td colspan="3">
-					<input type="text" size="10" name="userName" />
+				<td class="titles">이름*</td>
+				<td colspan="3" class="inputs">
+					<input type="text" size="10" name="userName"/>
 				</td>
 			</tr>
 			<tr>
-				<td>아이디*</td>
-				<td colspan="3">
+				<td class="titles">아이디*</td>
+				<td colspan="3" class="inputs">
 					<input type="text" size="10" name="userId" />
 				</td>
 			</tr>
 			<tr>
-				<td>비밀번호*</td>
-				<td colspan="3">
+				<td class="titles">비밀번호*</td>
+				<td colspan="3" class="inputs">
 					<input type="password" size="10" name="userPass" />
 				</td>
 			</tr>
 			<tr>
-				<td>비밀번호 확인*</td>
-				<td colspan="3">
+				<td class="titles">비밀번호 확인*</td>
+				<td colspan="3" class="inputs">
 					<input type="password" size="10" name="passConfirm" />
 				</td>
 			</tr>
 			<tr>
-				<td>성별</td>
-				<td colspan="3">
+				<td class="titles">성별</td>
+				<td colspan="3" class="inputs">
 					<!-- input[type="radio" name="gender" value=""] -->
 					<input type="radio" name="gender" value="M" /> 남 
 					<input type="radio" name="gender" value="F" /> 여
 				</td>
 			</tr>
 			<tr>
-				<td>연령대</td>
-				<td colspan="3">
+				<td class="titles">연령대</td>
+				<td colspan="3" class="inputs">
 					<!-- select[name="age"]>(option[value""]*3) --> 
 					<select
 						name="age" id="">
@@ -64,8 +68,8 @@ table, td, th {
 				<!-- 		<td></td> -->
 			</tr>
 			<tr>
-				<td>취미</td>
-				<td colspan="3">
+				<td class="titles">취미</td>
+				<td colspan="3" class="inputs">
 					<!-- form>(input[type="checkbox" name="hobby" value=""]*5) --> 
 					<input type="checkbox" name="hobby" value="sports" /> 스포츠 
 					<input type="checkbox" name="hobby" value="surfing" /> 서핑 
@@ -75,8 +79,8 @@ table, td, th {
 				</td>
 			</tr>
 			<tr>
-				<td>이메일*</td>
-				<td colspan="3">
+				<td class="titles">이메일*</td>
+				<td colspan="3" class="inputs">
 					<input type="text" size="10" name="emailId" />
 					@ 
 					<!-- select[name="email"]>(option[value=""]*5) -->
@@ -90,11 +94,13 @@ table, td, th {
 				</td>
 			</tr>
 			<tr>
-				<td>전화번호</td>
-				<td colspan="3">
-					<!-- select[name="address"]>(option[value=""]*5) -->
-					<!-- input[type="text" size="10" name="middleNum"] -->
-					<select name="address" id="">
+				<td class="titles">전화번호</td>
+				<td colspan="3" class="inputs">
+					<!-- select[name="phone1"]>(option[value=""]*5) -->
+					<!-- +input[type="text" size="10" name="phone2"] -->
+					<!-- +input[type="text" size="10" name="phone3] -->
+					<select name="phone1" id="">
+						<option value="">==번호 선택==</option>
 						<option value="02">02</option>
 						<option value="031">031</option>
 						<option value="041">041</option>
@@ -102,26 +108,39 @@ table, td, th {
 						<option value="064">064</option>
 					</select>
 						-
-						<input type="text" size="10" name="middleNum" />
+						<input type="text" size="5" name="phone2" />
 						-
-						<input type="text" size="10" name="lastNum" />
+						<input type="text" size="5" name="phone3" />
 				</td>
 			</tr>
 			<tr>
-				<td>주소</td>
-				<td colspan="3"></td>
+				<td class="titles">주소</td>
+				<td colspan="3" class="inputs">
+				<!-- select[name="intro"]>(option[value=""]*5) -->
+					<select name="adress" id="">
+						<option value="">==주소 선택==</option>
+						<option value="suwon">수원시</option>
+						<option value="daejeon">대전광역시</option>
+						<option value="cheonan">천안시</option>
+						<option value="ulsan">울산</option>
+						<option value="jeju">재주시</option>
+					</select> 
+				</td>
 			</tr>
 			<tr>
-				<td>소개말</td>
-				<td colspan="3">
+				<td class="titles">소개말</td>
+				<td colspan="3" class="inputs">
 					<!-- textarea[rows="10" cols="30"] --> 
-					<textarea name="" id="" cols="30" rows="10"></textarea>
+					<textarea name="intro" id="" cols="30" rows="10" style="overflow-y:scroll"></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="4">
-					<input type="submit" /> 
-					<input type="reset" />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" value="가입하기"/> 
+					<input type="reset" value="초기화"/>
 				</td>
 
 			</tr>
